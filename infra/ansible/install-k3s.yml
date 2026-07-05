@@ -1,0 +1,27 @@
+---
+- name: Configure K3s Cluster Control Plane
+  hosts: control_plane
+  become: true
+  tasks:
+    - name: Download and install K3s on Control Plane
+      shell: curl -sfL https://get.k3s.io | sh -s - --tls-san={{ ansible_host }}
+      args:
+        creates: /usr/local/bin/k3s
+
+    - name: Get K3s Cluster Node Token
+      slurp:
+        src: /var/lib/rancher/k3s/server/node-token
+      register: node_token_b64
+
+    - name: Save node token as fact
+      set_fact:
+        cluster_token: "{{ node_token_b64.content | b64decode | trim }}"
+
+- name: Configure K3s Cluster Workers
+  hosts: workers
+  become: true
+  tasks:
+    - name: Download and join K3s Workers to Cluster
+      shell: "curl -sfL https://get.k3s.io | K3S_URL=https://{{ hostvars['control-plane']['ansible_host'] }}:6443 K3S_TOKEN={{ hostvars['control-plane']['cluster_token'] }} sh -"
+      args:
+        creates: /usr/local/bin/k3s
