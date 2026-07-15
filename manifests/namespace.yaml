@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  creationTimestamp: "2026-07-10T21:07:56Z"
+  labels:
+    kubernetes.io/metadata.name: taskapp
+  name: taskapp
+  resourceVersion: "361978"
+  uid: f3b28308-b91c-4953-89d7-3deb74df33f7
+spec:
+  finalizers:
+  - kubernetes
+status:
+  phase: Active

@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: backend-config
+  namespace: taskapp
+data:
+  DATABASE_HOST: postgres-service.taskapp.svc.cluster.local
+  DATABASE_PORT: "5432"
+  DATABASE_NAME: taskapp
