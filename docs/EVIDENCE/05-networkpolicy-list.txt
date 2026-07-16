@@ -1,0 +1,9 @@
+NAME                          POD-SELECTOR   AGE
+allow-backend-egress          app=backend    42m
+allow-backend-from-frontend   app=backend    42m
+allow-backend-from-traefik    app=backend    29m
+allow-dns                     <none>         42m
+allow-frontend-egress         app=frontend   42m
+allow-frontend-ingress        app=frontend   42m
+allow-postgres-from-backend   app=postgres   42m
+default-deny-all              <none>         42m

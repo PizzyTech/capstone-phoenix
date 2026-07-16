@@ -1,0 +1,2 @@
+NAME      SYNC STATUS   HEALTH STATUS   REVISION                                   PROJECT
+taskapp   Synced        Healthy         b828cf9fb9f283761aa581d96aa75507dac3abcd   default

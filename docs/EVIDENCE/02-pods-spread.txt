@@ -1,0 +1,8 @@
+NAME                        READY   STATUS      RESTARTS        AGE     IP           NODE            NOMINATED NODE   READINESS GATES
+backend-798cb985c4-ntjl5    1/1     Running     0               18m     10.42.0.22   ip-10-0-1-228   <none>           <none>
+backend-798cb985c4-wtfqj    1/1     Running     7 (3h34m ago)   34h     10.42.1.14   ip-10-0-1-53    <none>           <none>
+backend-migration-mg427     0/1     Completed   0               121m    <none>       ip-10-0-1-228   <none>           <none>
+frontend-74b6b897bc-29qz4   1/1     Running     0               18m     10.42.2.20   ip-10-0-1-31    <none>           <none>
+frontend-74b6b897bc-jsqtl   1/1     Running     3 (12m ago)     34h     10.42.0.17   ip-10-0-1-228   <none>           <none>
+frontend-74b6b897bc-rpxpk   1/1     Running     0               34h     10.42.1.17   ip-10-0-1-53    <none>           <none>
+postgres-0                  1/1     Running     0               3h35m   10.42.1.19   ip-10-0-1-53    <none>           <none>
