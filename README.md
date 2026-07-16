@@ -13,6 +13,12 @@
 **App under test:** TaskApp — React/nginx frontend, Flask/Postgres backend, GHCR images
 `ghcr.io/ts-a-devops/taskapp-backend`, `ghcr.io/ts-a-devops/taskapp-frontend`.
 
+## Live Deployment
+
+**App URL:** https://taskapp.13.61.142.226.nip.io
+
+![Live TaskApp Dashboard](docs/EVIDENCE/Live%20TaskApp%20Dashboard.png)
+
 ---
 
 ## 1. What you're given vs. what you build
